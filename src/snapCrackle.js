@@ -1,23 +1,23 @@
-function snapCrackle(maxValue){
-    var cont =1 ;
-    for (let mult = 5;mult <= 20; mult+=5) {
-      mult5 = mult;
-      console.log(mult);
+function snapCrackle(maxValue) {
+
+  let numeroRetornado = " ";
+
+  for (let number = 1; number <= maxValue; number++) {
+
+    if (number % 2 !== 0 && number % 5 === 0) {
+
+      numeroRetornado = numeroRetornado + "SnapCrackle," + "";
+    } else if (number % 5 === 0) {
+
+      numeroRetornado = numeroRetornado + "Crackle, " + "";
+    } else if (number % 2 !== 0) {
+
+      numeroRetornado = numeroRetornado + "Snap, " + "";
+
+    } else {
+      numeroRetornado = numeroRetornado + number + ", ";
     }
-        while (cont<=20) {
-          var resto = cont%5;
-          if (resto == 0){
-            console.log ("SnapCrackle")
-          }
-            var resto = cont%2;
-            if (resto == 0 ){
-                console.log(cont);
-           }else if (resto == 1){
-              console.log("Snap");
-            } else if(resto == 5){
-              console.log("Crackle")
-            }
-            cont = cont + 1;
-        }
-        console.log("FIM");
-    }
+  }
+  return numeroRetornado;
+}
+console.log(snapCrackle(12));
